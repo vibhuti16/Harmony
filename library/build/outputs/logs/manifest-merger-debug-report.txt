@@ -1,0 +1,31 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:2:1-12:12
+INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:2:1-12:12
+INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:2:1-12:12
+	package
+		ADDED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:3:5-49
+		INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml
+		INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:5:5-32
+	xmlns:android
+		ADDED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:4:5-29
+uses-sdk
+ADDED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:7:5-8:38
+INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:7:5-8:38
+INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:7:5-8:38
+INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:7:5-8:38
+INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:7:5-8:38
+	android:targetSdkVersion
+		INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml
+		ADDED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:7:5-8:38
+		INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:8:9-35
+		INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml
+		INJECTED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml
+application
+ADDED from /Users/hasmukhshah/AndroidStudioProjects/android/Harmony/library/src/main/AndroidManifest.xml:10:5-20

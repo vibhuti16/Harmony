@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="search"
+            type="dev.baseio.harmony.data.SearchData" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="@dimen/item_search_margin_card"
+        android:layout_marginRight="@dimen/item_search_margin_card"
+        android:layout_marginTop="@dimen/item_search_margin__top_card"
+        android:background="@color/colorWhiteCard"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/colorWhiteCard"
+        app:cardCornerRadius="@dimen/item_corner_radius"
+        app:cardElevation="@dimen/item_card_elavation"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_artist_name"
+                style="@style/harmony_normal_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/item_card_elavation"
+                android:gravity="left"
+                android:padding="@dimen/item_search_artist_padding"
+                android:text='@{search.title}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_album_date"
+                style="@style/harmony_thin_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:gravity="left"
+                android:maxLines="1"
+                android:padding="@dimen/item_search_artist_padding"
+                android:text="@{search.title}"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

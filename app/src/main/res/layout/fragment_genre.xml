@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/my_gradient_drawable"
+    >
+
+    <data>
+        <variable
+            name="adapter"
+            type="dev.baseio.harmony.ui.genre.GenreAdapter" />
+        <variable
+            name="artistsAdapter"
+            type="dev.baseio.harmony.ui.main.ArtistsAdapter" />
+        <variable
+            name="playlistAdapter"
+            type="dev.baseio.harmony.ui.main.PlayListsAdapter" />
+        <variable
+            name="podcastAdapter"
+            type="dev.baseio.harmony.ui.main.PodcastsAdapter" />
+        
+        <variable
+            name="vm"
+            type="dev.baseio.harmony.ui.genre.GenreViewModel" />
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cl_artists"
+            app:isArtistsVisible="@{vm.mainListLiveData}"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artists"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/txt_artists"
+                android:textSize="@dimen/item_title"
+                android:padding="@dimen/item_artist_padding"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_artists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:fadeScrollbars="true"
+                android:padding="@dimen/genre_recycler_padding"
+                android:scrollbars="none"
+                app:adapter="@{artistsAdapter}"
+                app:adapterArtistsList="@{vm.mainListLiveData}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/txt_artists"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/item_artists"
+                android:orientation="horizontal"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl_genre"
+        app:layout_constraintTop_toBottomOf="@id/cl_artists"
+        >
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_genres"
+                app:shimmer_auto_start="true"
+                app:isGoneLayout="@{vm.result}"
+                app:shimmer_highlight_color="@color/colorWhiteCard">
+                <include layout="@layout/shimmer_grid_layout"/>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genres"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/txt_genres"
+            android:textSize="@dimen/item_title"
+            android:padding="@dimen/item_artist_padding"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:fadeScrollbars="true"
+                android:padding="@dimen/genre_recycler_padding"
+                android:scrollbars="none"
+                app:isGoneLayout="@{vm.result}"
+                app:adapter="@{adapter}"
+                app:adapterGenreList="@{vm.result}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/txt_genres"
+                app:layout_constraintStart_toStartOf="parent"
+                app:spanCount="2"
+                tools:listitem="@layout/item_genre"
+                android:orientation="horizontal"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl_playlists"
+        app:isArtistsVisible="@{vm.mainListLiveData}"
+        app:layout_constraintTop_toBottomOf="@id/cl_genre"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PlayLists"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/txt_playlists"
+            android:textSize="@dimen/item_title"
+            android:padding="@dimen/item_artist_padding"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_playlists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:fadeScrollbars="true"
+            android:padding="@dimen/genre_recycler_padding"
+            android:scrollbars="none"
+            app:adapter="@{playlistAdapter}"
+            app:adapterPlayList="@{vm.mainListLiveData}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/txt_playlists"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/item_artists"
+            android:orientation="horizontal"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cl_podcasts"
+        app:isArtistsVisible="@{vm.mainListLiveData}"
+        app:layout_constraintTop_toBottomOf="@id/cl_playlists"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podcasts"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorWhite"
+            android:id="@+id/txt_podcasts"
+            android:textSize="@dimen/item_title"
+            android:padding="@dimen/item_artist_padding"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_podcasts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:fadeScrollbars="true"
+            android:padding="@dimen/genre_recycler_padding"
+            android:scrollbars="none"
+            app:adapter="@{podcastAdapter}"
+            app:adapterPodcastsList="@{vm.mainListLiveData}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/txt_podcasts"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/item_playlist"
+            android:orientation="horizontal"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
