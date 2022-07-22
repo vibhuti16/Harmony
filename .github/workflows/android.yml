@@ -13,6 +13,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Run Lint
+      run: ./gradlew lintDebug
+
+    - name: Upload HTML test report
+      uses: action/upload-artifact@v2
+      with:
+        name: index.html
+        path: app/build/reports/lint-results-debug.html
+
     - name: set up JDK 11
       uses: actions/setup-java@v3
       with:
@@ -22,5 +32,6 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+
     - name: Build with Gradle
       run: ./gradlew build
