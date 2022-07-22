@@ -63,7 +63,6 @@ jobs:
     runs-on: macos-latest
 
     steps:
-
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -71,13 +70,14 @@ jobs:
         run: chmod +x gradlew
 
       - name: Run expresso tests
-        uses: reactivecircus/android-emulator-runner@v2
+        run: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
           script: ./gradlew connectedCheck
 
-      -name: Upload test report
+      - name: Upload test report
         uses: actions/upload-artifact@v3
-          with:
-            name: instrumentation_test_report
-            path: app/build/reports/androidTests/connected/
+        with:
+          name: instrumentation_test_report
+          path: app/build/reports/androidTests/connected/
+
