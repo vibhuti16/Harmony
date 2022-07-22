@@ -190,11 +190,3 @@ dependencies{
     implementation(Libs.Others.picasso)
 
 }
-
-//sonarqube {
-//    properties {
-//        setProperty("sonar.projectKey", "vibhuti16_Harmony")
-//        setProperty("sonar.organization", "vibhuti16")
-//        setProperty ("sonar.host.url", "https://sonarcloud.io")
-//    }
-//}
