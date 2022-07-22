@@ -160,7 +160,7 @@ dependencies{
     androidTestImplementation(Libs.Test.testExt)
     debugImplementation(Libs.Test.fragment_test)
     testImplementation(Libs.Test.mockK)
-//    testImplementation(Libs.Test.coreTesting)
+    testImplementation(Libs.Test.coreTesting)
     testImplementation(Libs.Test.jUnit)
     testImplementation(Libs.Test.mockServer)
     testImplementation(Libs.Coroutines.test)

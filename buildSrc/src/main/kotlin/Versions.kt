@@ -43,7 +43,7 @@ object Versions{
     val lifecycleVersion = "2.2.0"
 
     //Test
-    val test_core_version = "1.5.0-alpha01"
+    val test_core_version = "1.4.0"
     val test_rule_version = "1.4.1-alpha07"
     val test_orchestrator_version = "1.4.2-alpha04"
     val test_ktx_version = "1.1.4-alpha07"
