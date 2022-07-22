@@ -191,10 +191,10 @@ dependencies{
 
 }
 
-sonarqube {
-    properties {
-        property("sonar.projectKey", "vibhuti16_Harmony")
-        property("sonar.organization", "vibhuti16")
-        property ("sonar.host.url", "https://sonarcloud.io")
-    }
-}
+//sonarqube {
+//    properties {
+//        setProperty("sonar.projectKey", "vibhuti16_Harmony")
+//        setProperty("sonar.organization", "vibhuti16")
+//        setProperty ("sonar.host.url", "https://sonarcloud.io")
+//    }
+//}
