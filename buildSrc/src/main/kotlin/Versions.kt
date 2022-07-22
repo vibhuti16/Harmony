@@ -47,7 +47,7 @@ object Versions{
     val test_rule_version = "1.4.1-alpha07"
     val test_orchestrator_version = "1.4.2-alpha04"
     val test_ktx_version = "1.1.4-alpha07"
-    val junit_version = "4.12"
+    val junit_version = "4.10"
     val mockito_version = "2.2.0"
     val mockK_version = "1.9.3"
     val truth_version = "1.5.0-alpha07"

@@ -35,11 +35,11 @@ android{
             proguardFiles(getDefaultProguardFile(Plugins.proguardTxt), Plugins.proguardPro)
         }
     }
-    compileOptions{
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-
-    }
+//    compileOptions{
+//        sourceCompatibility = JavaVersion.VERSION_1_10
+//        targetCompatibility = JavaVersion.VERSION_1_10
+//
+//    }
     kotlinOptions {
         jvmTarget = Plugins.javaVersion
     }
@@ -160,7 +160,7 @@ dependencies{
     androidTestImplementation(Libs.Test.testExt)
     debugImplementation(Libs.Test.fragment_test)
     testImplementation(Libs.Test.mockK)
-//    testImplementation(Libs.Test.coreTesting)
+    testImplementation(Libs.Test.coreTesting)
     testImplementation(Libs.Test.jUnit)
     testImplementation(Libs.Test.mockServer)
     testImplementation(Libs.Coroutines.test)
