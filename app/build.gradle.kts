@@ -48,12 +48,21 @@ android{
         isAbortOnError = false
     }
 //    androidExtensions { isExperimental = true }
-    sourceSets {
-        getByName("main").java.srcDirs("src/main/kotlin")
-        getByName("androidTest").java.srcDirs("src/androidTest/jaa")
-        getByName("test").java.srcDirs("src/sharedTest")
-        getByName("androidTest").java.srcDirs("src/sharedTest")
+//    sourceSets {
+//        getByName("main").java.srcDirs("src/main/kotlin")
+//        getByName("androidTest").java.srcDirs("src/androidTest/jaa")
+//        getByName("test").java.srcDirs("src/sharedTest")
+//        getByName("androidTest").java.srcDirs("src/sharedTest")
 
+//    }
+    sourceSets {
+        this.getByName("androidTest"){
+            //Adds the given source directory to this set.
+            this.java.srcDir("src/sharedTest")
+        }
+        this.getByName("test"){
+            this.java.srcDir("src/sharedTest")
+        }
     }
     buildFeatures {
         dataBinding=true
@@ -101,6 +110,8 @@ dependencies{
     implementation(Libs.Jetpack.lifecycle_runtime)
     implementation(Libs.Jetpack.lifecycle_fragment)
     implementation("com.google.android.material:material:1.6.1")
+    androidTestImplementation(project(mapOf("path" to ":app")))
+    androidTestImplementation(project(mapOf("path" to ":app")))
     kapt(Libs.Jetpack.lifecycle_kapt)
     /** navigation **/
     implementation(Libs.Jetpack.navigation_fragment)
@@ -161,6 +172,7 @@ dependencies{
     debugImplementation(Libs.Test.fragment_test)
     testImplementation(Libs.Test.mockK)
     testImplementation(Libs.Test.coreTesting)
+    androidTestImplementation(Libs.Test.coreTesting)
     testImplementation(Libs.Test.jUnit)
     testImplementation(Libs.Test.mockServer)
     testImplementation(Libs.Coroutines.test)

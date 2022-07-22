@@ -57,7 +57,7 @@ object Libs{
     object DI {
         val hilt = "com.google.dagger:hilt-android:${Versions.hilt_version}"
         val hilt_kapt = "com.google.dagger:hilt-android-compiler:${Versions.hilt_version}"
-//        val hilt_androidx = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.a_hilt_version}"
+        val hilt_androidx = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.a_hilt_version}"
         val hilt_androidx_kapt = "androidx.hilt:hilt-compiler:${Versions.a_hilt_version}"
         val hilt_common = "androidx.hilt:hilt-common:${Versions.hilt_version}"
         val hilt_test = "com.google.dagger:hilt-android-testing:${Versions.hilt_version}"

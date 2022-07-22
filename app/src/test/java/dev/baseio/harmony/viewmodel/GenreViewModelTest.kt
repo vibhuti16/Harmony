@@ -5,7 +5,6 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
-import MockUtil
 import dev.baseio.harmony.core.data.ApiResult
 import dev.baseio.harmony.data.Data
 import dev.baseio.harmony.domain.local.HarmonyDao

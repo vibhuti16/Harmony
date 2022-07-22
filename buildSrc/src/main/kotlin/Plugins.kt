@@ -20,13 +20,13 @@ object Plugins{
     val detektPlugin                = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:${Versions.detekt_version}"
 
     val applicationId               = "dev.baseio.harmony"
-    val min                         = 19
+    val min                         = 26
     val compile                     = 32
     val versionCode                 = 1
     val versionName                 = "1.0"
     val buildVersion                = "32.0.0"
     val target                      = compile
-    val testInstrumentationRunner   = "com.fevziomurtekin.deezer.CustomTestRunner"
+    val testInstrumentationRunner   = "dev.baseio.harmony.CustomTestRunner"
     val javaVersion                 = "1.8"
     val main                        = "main"
     val release                     = "release"
