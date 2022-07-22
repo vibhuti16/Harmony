@@ -4,6 +4,7 @@ plugins{
     id(Plugins.androidApplication)
     id(Plugins.hiltPlugin)
     id(Plugins.safeArgsApply)
+    id(Plugins.sonarCube)
     kotlin(Plugins.kotlinAndroid)
 //    kotlin(Plugins.kotlinAndroidExtensions)
     kotlin(Plugins.kotlinKaptExtensions)

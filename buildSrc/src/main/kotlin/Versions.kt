@@ -76,4 +76,6 @@ object Versions{
     val detekt_version = "1.21.0-RC2"
 
     val picasso_version = "2.8"
+
+    val sonarCube = "2.7.1"
 }
