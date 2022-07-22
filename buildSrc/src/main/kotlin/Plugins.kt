@@ -14,6 +14,7 @@ object Plugins{
     val hiltPlugin                  = "dagger.hilt.android.plugin"
     val safeArgsPlugin              = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation_version}"
     val safeArgsApply               = "androidx.navigation.safeargs"
+    val sonarCubePlugin             = "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7.1"
 
     /* Detekt */
     val detekt                      = "io.gitlab.arturbosch.detekt"

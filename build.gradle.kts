@@ -16,7 +16,7 @@ buildscript {
         classpath(Plugins.mavenGradlePlugin)
         classpath(Plugins.hiltExtensions)
         classpath(Plugins.safeArgsPlugin)
-        classpath("com.android.tools.build:gradle:7.2.1")
+        classpath(Plugins.sonarCubePlugin)
     }
 }
 
