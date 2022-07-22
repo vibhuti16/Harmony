@@ -28,7 +28,6 @@ allprojects{
     repositories{
         google()
         mavenCentral()
-        jcenter()
         maven(url = Plugins.jitpackUrl)
         maven(url ="https://repo.spring.io/plugins-release/")
     }
