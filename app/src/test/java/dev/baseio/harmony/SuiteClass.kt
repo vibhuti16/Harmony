@@ -1,6 +1,5 @@
 package dev.baseio.harmony
 
-import dev.baseio.harmony.domain.local.HarmonyDaoTest
 import dev.baseio.harmony.domain.network.HarmonyServiceTest
 import dev.baseio.harmony.repository.*
 import dev.baseio.harmony.viewmodel.*
