@@ -123,7 +123,7 @@ jobs:
           java-version: 11
 
       - name: Build debug apk
-        run: ./gradlew assempleDebug --stackTrace
+        run: ./gradlew assembleDebug --stackTrace
 
       - name: Upload apk
         uses: actions/upload-artifact@v3
