@@ -9,6 +9,7 @@ plugins{
 //    kotlin(Plugins.kotlinAndroidExtensions)
     kotlin(Plugins.kotlinKaptExtensions)
     kotlin(Plugins.kotlinSerialization).version("1.4.10")
+    id("jacoco")
 }
 
 android{
@@ -198,3 +199,9 @@ sonarqube {
         setProperty("sonar.host.url", "https://sonarcloud.io")
     }
 }
+
+//jacocoTestReport {
+//    reports {
+//        xml.enabled true
+//    }
+//}
